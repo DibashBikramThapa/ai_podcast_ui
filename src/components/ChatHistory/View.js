@@ -15,7 +15,7 @@ function View({query, setIsStarted, setIsLoading}) {
             if(query){
                 setIsLoading(true)
                 setIsStarted(true)
-                let url = process.env.NEXT_PUBLIC_HOST + '/podcast'
+                let url = process.env.NEXT_PUBLIC_BACKEND_HOST + '/podcast'
                 try{
                     let resp = await fetch(url, {
                             method: 'POST',
